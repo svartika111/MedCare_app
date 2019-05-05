@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".homepage"
+
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".homepage"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/backfinal"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            >
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+
+                card_view:cardCornerRadius="5dp"
+
+                card_view:cardBackgroundColor="@android:color/transparent">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linear_row_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/drawable_about"
+                            style="@style/home_icon_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                style="@style/home_icon_image_view"
+                                android:layout_width="fill_parent"
+                                android:onClick="mydoc"
+                                app:srcCompat="@drawable/mydocfinal" />
+
+                            <TextView
+                                style="@style/home_icon_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="My Doctor" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="35dp"
+                            android:background="@color/colorPrimaryDark" />
+
+
+                        <LinearLayout
+                            android:id="@+id/drawable_fees"
+                            style="@style/home_icon_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                style="@style/home_icon_image_view"
+                                android:layout_width="fill_parent"
+                                android:onClick="profile"
+                                app:srcCompat="@drawable/profilefinal" />
+
+                            <TextView
+                                style="@style/home_icon_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Profile" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="25dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_row_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear_row_1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/drawable_attendance"
+                            style="@style/home_icon_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                style="@style/home_icon_image_view"
+                                android:layout_width="fill_parent"
+                                android:onClick="emergency"
+                                app:srcCompat="@drawable/emgfinal" />
+
+                            <TextView
+                                style="@style/home_icon_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Emergency" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="35dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <LinearLayout
+                            android:id="@+id/drawable_cbox"
+                            style="@style/home_icon_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                style="@style/home_icon_image_view"
+                                android:layout_width="fill_parent"
+                                android:onClick="general"
+                                app:srcCompat="@drawable/gifinal" />
+
+                            <TextView
+                                style="@style/home_icon_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="General Information" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="35dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_row_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear_row_2"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:id="@+id/drawable_committee"
+                            style="@style/home_icon_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                style="@style/home_icon_image_view"
+                                android:layout_width="fill_parent"
+                                android:onClick="helpsomeone"
+                                app:srcCompat="@drawable/helpfinal" />
+
+                            <TextView
+                                style="@style/home_icon_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Help Someone" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="35dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <LinearLayout
+                            android:id="@+id/drawable_result"
+                            style="@style/home_icon_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                style="@style/home_icon_image_view"
+                                android:layout_width="fill_parent"
+                                android:onClick="hospitals"
+                                app:srcCompat="@drawable/nearfinal" />
+
+                            <TextView
+                                style="@style/home_icon_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Nearby Hospitals" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

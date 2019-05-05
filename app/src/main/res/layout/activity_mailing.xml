@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mailing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/gmailfinal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mail Your Doctor"
+            android:typeface="sans"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:textSize="25dp"/>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="330dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/myCardView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        card_view:cardBackgroundColor="@android:color/transparent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your subject"
+            android:id="@+id/subject"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:hint="Enter the message you want to send to the doctor...."
+            android:id="@+id/message"/>
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:background="@drawable/bluedark"
+            android:textColor="#ffffff"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:id="@+id/btnsave"/>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
